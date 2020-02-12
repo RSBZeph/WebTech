@@ -1,0 +1,53 @@
+body {
+	background-color: #ADD8E6;
+	max-width: 960px;
+	margin: auto;
+}
+
+header {
+	background-color: #AFEEEE;
+	border-radius: 5px;
+	margin: 0 1.5%;
+}
+
+aside {
+	float: left;
+	margin: 0 1.5%;
+	width: 20%;
+	padding: 1px;
+	background-color: #AFEEEE;
+	border-radius: 5px;
+}
+
+section {
+	float: right;
+	margin: 0 1.5%;
+	width: 70%;	
+	padding: 1px;
+	background-color: #AFEEEE;
+	border-radius: 5px;
+}
+
+li {
+	list-style-type: none;
+}
+
+.button {
+	background-color: none;
+	border: 1px solid black;
+	color: black;
+	padding: 5px 8px;
+	text-align: left;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin: 2px 1px;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 5px;
+}
+
+h1 {
+	color: red;
+	text-align: center;
+}
