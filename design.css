@@ -8,6 +8,9 @@ html {
 
 body {
 	max-width: 960px;
+	-webkit-margin: auto;
+	-moz-margin: auto;
+	-o-margin: auto;
 	margin: auto;
 }
 
@@ -59,6 +62,11 @@ li.menu {
 	padding: 4% 6%;
 	cursor: pointer;
 	width: 87%;
+}
+
+.button:hover {
+	background-color: #5555FF;
+	color: #FFFFFF;
 }
 
 .main {
