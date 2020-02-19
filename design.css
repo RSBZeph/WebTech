@@ -22,20 +22,36 @@ header {
 	padding: 1.5%;
 }
 
-aside {
-	float: left;
-	margin: 0 0.75% 0 1.5%;
-	width: 16%;
+@media only screen and (max-width: 600px) {
+	aside {
+		margin: 0 1.5%;
+	}
+
+	section {
+		border: 1px solid black;
+		margin: 0 1.5%;
+		padding: 1.5%;
+		background-color: #CCCCFF;
+		border-radius: 3px;
+	}	
 }
 
-section {
-	float: right;
-	border: 1px solid black;
-	margin: 0 1.5% 0 0.75%;
-	width: 76%;	
-	padding: 1.5%;
-	background-color: #CCCCFF;
-	border-radius: 3px;
+@media only screen and (min-width: 600px) {
+	aside {
+		float: left;
+		margin: 0 0.75% 0 1.5%;
+		width: 16%;
+	}
+
+	section {
+		float: right;
+		border: 1px solid black;
+		margin: 0 1.5% 0 0.75%;
+		width: 76%;	
+		padding: 1.5%;
+		background-color: #CCCCFF;
+		border-radius: 3px;
+	}
 }
 
 footer {
