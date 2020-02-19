@@ -29,11 +29,34 @@ header {
 
 	section {
 		border: 1px solid black;
-		margin: 0 1.5%;
+		margin: 1.5% 1.5% 0;
 		padding: 1.5%;
 		background-color: #CCCCFF;
 		border-radius: 3px;
 	}	
+
+	.button {
+		background-color: #CCCCFF;
+		border: 1px solid black;
+		border-radius: 3px;
+		color: black;
+		text-align: left;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 20px;
+		padding: 2% 3%;
+		cursor: pointer;
+		width: 93.5%;
+	}
+
+	li {
+		margin: 0 4%;
+	}
+
+	.tablemobile {
+		overflow-x: auto;
+		display: block;
+	}
 }
 
 @media only screen and (min-width: 600px) {
@@ -52,6 +75,24 @@ header {
 		background-color: #CCCCFF;
 		border-radius: 3px;
 	}
+
+	.button {
+		background-color: #CCCCFF;
+		border: 1px solid black;
+		border-radius: 3px;
+		color: black;
+		text-align: left;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		padding: 4% 6%;
+		cursor: pointer;
+		width: 87%;
+	}
+
+	li {
+		margin: 0 2%;
+	}
 }
 
 footer {
@@ -63,32 +104,14 @@ footer {
 }
 
 ul {
-padding: 0;
-margin: 0;
-}
-
-li {
-	margin: 0 2%;
+	padding: 0;
+	margin: 0;
 }
 
 li.menu {
 	margin: 0;
 	list-style-type: none;
 } 
-
-.button {
-	background-color: #CCCCFF;
-	border: 1px solid black;
-	border-radius: 3px;
-	color: black;
-	text-align: left;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 12px;
-	padding: 4% 6%;
-	cursor: pointer;
-	width: 87%;
-}
 
 .button:hover {
 	background-color: #5555FF;
