@@ -52,11 +52,6 @@ header {
 	li {
 		margin: 0 4%;
 	}
-
-	.tablemobile {
-		overflow-x: auto;
-		display: block;
-	}
 }
 
 @media only screen and (min-width: 600px) {
@@ -160,6 +155,11 @@ h4 {
 
 table, tr {
 	border: 1px solid black;
+}
+
+.tablemobile {
+	overflow-x: auto;
+	display: block;
 }
 
 th {
