@@ -1,26 +1,37 @@
-function Click() {
-	var text = document.getElementById("textID").value;
-	var c = new Course(text);
-	createPar(c.name);
-	createPar(c.lecturer.getFullName());
-	createPar(c.lecturer.lecID);
-	createPar(c.assistent.getFullName());
-	createPar(c.assistent.assID);
+window.addEventListener("load", LoadInfo, false);
+
+function LoadInfo() {
+	var c = new Course();
+	CreatePar("Title", c.title);
+	CreatePar("Code", c.code);
 }
 
-function createPar(text) {
+function CreatePar(subject, text) {
 	var pos = document.getElementsByTagName("section")[0];
 	var myLink = document.createElement("p");
-	var myText = document.createTextNode(text);
+	var myText = document.createTextNode(subject + ":\t" + text);
 	myLink.appendChild(myText);
 	pos.appendChild(myLink);
 }
 
 class Course {
-	constructor(courseName) {
-		this.name = courseName;
-		this.lecturer = new Lecturer("John", "Doe", "1234567");
-		this.assistent = new Assistent("Fabian", "van Maanen", "6214908");
+	constructor() {
+		this.title = "Gameprogrammeren";
+		this.code = "INFOB1GP";
+		this.department = "Information and Computing Sciences";
+		this.credits = 7.5;
+		this.periode = 1;
+		this.timeslot = "D";
+		this.staff = new Staff();
+	}
+}
+
+class Staff {
+	constructor() {
+		this.lec = new Lecturer("Dr.", "Gameprogrammer", "1234");
+		this.ass1 = new Assistent("Fabian", "van Maanen", "3456");
+		this.ass2 = new Assistent("Yoran", "den Heijer", "5678");
+		this.ass3 = new Assistent("Romeo", "Zeph", "7890");
 	}
 }
 
@@ -43,8 +54,8 @@ class Lecturer extends StaffMember {
 }
 
 class Assistent extends StaffMember {
-	constructor(firstName, lastName, assID) {
+	constructor(firstName, lastName, stuID) {
 		super(firstName, lastName);
-		this.assID = assID || "unknown";	
+		this.stuID = stuID || "unknown";	
 	}
 }
