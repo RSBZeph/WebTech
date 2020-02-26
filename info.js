@@ -13,10 +13,10 @@ function LoadInfo() {
 
 	var list = [
 		["Vorm", "Groep", "Docent"],
-		["Hoorcollege", "-", c.staff.lec.firstName + " " + c.staff.lec.lastName],
-		["Werkcollege", "Groep 1", c.staff.ass1.firstName + " " + c.staff.ass1.lastName],
-		["Werkcollege", "Groep 2", c.staff.ass2.firstName + " " + c.staff.ass2.lastName],
-		["Werkcollege", "Groep 3", c.staff.ass3.firstName + " " + c.staff.ass2.lastName]
+		["Hoorcollege", "-", c.staff.lec.getFullName()],
+		["Werkcollege", "Groep 1", c.staff.ass1.getFullName()],
+		["Werkcollege", "Groep 2", c.staff.ass2.getFullName()],
+		["Werkcollege", "Groep 3", c.staff.ass3.getFullName()]
 	];
 	CreateTable(list);
 }
