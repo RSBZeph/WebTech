@@ -7,7 +7,7 @@ html {
 }
 
 body {
-	max-width: 65%;
+	max-width: 960px;
 	-webkit-margin: auto;
 	-moz-margin: auto;
 	-o-margin: auto;
