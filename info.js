@@ -33,7 +33,7 @@ function CreateTable(list) {
 	var pos = document.getElementsByTagName("section")[0];
 	var tbl = document.createElement("table");
 	tbl.setAttribute("class", "tablemobile");
-	tbl.style.width = "100%";
+	tbl.setAttribute("style", "display: table;")
 	tbl.setAttribute("border", "1");
 	var tbdy = document.createElement("tbody");
 
