@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Gameprogramming</title>
 		<link rel="stylesheet" href="design.css">
+		<script type="text/javascript" src="select.js"></script>
 	</head>
 	<body>
 		<header>
@@ -21,9 +22,15 @@
 					<li class="menu"><a href="literature.html" class="button">Literature</a></li>
 					<li class="menu"><a href="info.html" class="button">Info</a></li><br>
 				</ul>
-				<ul>
-					<li class="menu"><a onclick="alert('hoi');" class="button">Yeet</a></li>
-				</ul>
+				<select id="attr">
+					<option value="bck">Background color</option>
+					<option value="txt">Text color</option>
+				</select>		
+				<select id="valu">
+					<option value="ble">Blue</option>
+					<option value="red">Red</option>
+				</select>	
+				<input type="submit" onclick="backGroundColor()"></aside>	
 			</aside>
 			<section>
 				<h3>Course Goal:</h3>

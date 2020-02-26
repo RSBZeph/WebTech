@@ -7,11 +7,15 @@ html {
 }
 
 body {
-	max-width: 960px;
+	max-width: 65%;
 	-webkit-margin: auto;
 	-moz-margin: auto;
 	-o-margin: auto;
 	margin: auto;
+}
+
+.bgColor {
+	background-color: red;
 }
 
 header {
@@ -115,6 +119,10 @@ li.menu {
 
 .main {
 	overflow: hidden;
+}
+
+select {
+	width: 100%;
 }
 
 p.footer {
