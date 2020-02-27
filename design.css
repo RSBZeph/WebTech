@@ -14,10 +14,6 @@ body {
 	margin: auto;
 }
 
-.bgColor {
-	background-color: red;
-}
-
 header {
 	background-color: #CCCCFF;
 	border: 1px solid black;
@@ -51,6 +47,10 @@ header {
 		padding: 2% 3%;
 		cursor: pointer;
 		width: 93.5%;
+	}
+
+	.main_aside {
+		margin: 0 0 1.5%;
 	}
 
 	li {
@@ -87,6 +87,16 @@ header {
 		padding: 4% 6%;
 		cursor: pointer;
 		width: 87%;
+	}
+
+	.main_aside {
+		margin: 0 0 10%;
+	}
+
+	select {
+		font-size: 12px;
+		padding: 2% 3%;
+		margin: 0 0 2%;
 	}
 
 	li {

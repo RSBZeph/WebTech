@@ -1,0 +1,21 @@
+<ul>
+	<li class="menu"><a href="home.html" class="button">Home</a></li>
+	<li class="menu"><a href="staff.html" class="button">Staff</a></li>
+	<li class="menu"><a href="schedule.html" class="button">Schedule</a></li>
+	<li class="menu"><a href="assignments.html" class="button">Assignments</a></li>
+	<li class="menu"><a href="literature.html" class="button">Literature</a></li>
+	<li class="menu"><a href="info.html" class="button">Info</a></li><br>
+</ul>
+<select id="prop">
+	<option value="section">Section</option>
+	<option value="header">Header</option>
+</select>	
+<select id="attr">
+	<option value="background-color">Background color</option>
+	<option value="color">Text color</option>
+</select>		
+<select id="valu">
+	<option value="blue">Blue</option>
+	<option value="red">Red</option>
+</select>	
+<input type="submit" onclick="changeAppearance(prop.value, attr.value, valu.value)">	
