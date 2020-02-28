@@ -1,15 +1,25 @@
 // Werkend maken met FireFox
 // Heeft net iets andere rules
 
-function changeAppearance(attr, prop, valu) {
-	var design = document.getElementById("design").sheet;
+function changeAppearance(event) {
+	var attr = document.getElementById("attribute").value;
+	var prop = document.getElementById("property").value;
+	var valu = document.getElementById("value").value;
 
-	if(design.rules[0].selectorText == ".appearance") {
-		design.removeRule(0);
+	console.log(prop);
+
+	switch(prop) {
+		case "background-color":
+		 	document.getElementsByTagName(attribute)[0].style.backgroundColor = value;
+		 	break;
+		case "color":
+			document.getElementsByTagName(attribute)[0].style.color = value;
+			break;
+		case "font-size":
+			document.getElementsByTagName(attribute)[0].style.fontSize = value;
+			break;
 	}
-
-	design.insertRule('.appearance {' + prop + ': ' + valu + ';}', 0);
-
-	var elem = document.getElementsByTagName(attr)[0];
-	elem.classList.toggle("appearance");
 }
+
+var event = document.getElementById("value");
+event.addEventListener("input", changeAppearance, false);

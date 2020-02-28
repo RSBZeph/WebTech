@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Gameprogramming</title>
 		<link id="design" rel="stylesheet" href="design.css">
-		<script type="text/javascript" src="select.js"></script>
 	</head>
 	<body>
 		<header>
@@ -25,19 +24,19 @@
 					</ul>
 				</div>
 				<div class="main_aside">
-					<select id="attr">
+
+				</div>
+				<div class="main_aside">
+					<select id="attribute">
 						<option value="section">Section</option>
 						<option value="header">Header</option>
 					</select>	
-					<select id="prop">
+					<select id="property">
 						<option value="background-color">Background color</option>
 						<option value="color">Text color</option>
+						<option value="font-size">Font Size</option>
 					</select>	
-					<select id="valu">
-						<option value="blue">Blue</option>
-						<option value="red">Red</option>
-					</select>	
-					<input type="submit" onclick="changeAppearance(attr.value, prop.value, valu.value)">	
+					<input type="text" id="value" placeholder="value">
 				</div>
 			</aside>
 			<section>
@@ -63,15 +62,6 @@
 					<li>background, history and classics of game programming</li>
 					<li>applications, in particular for creating interactive games</li>
 				</ul>
-				<table>
-					<tr>
-						<th colspan="2">Header</th>
-					</tr>
-					<tr>
-						<td>Background</td>
-						
-					</tr>
-				</table>
 			</section>
 		</div>
 		<footer>
@@ -80,5 +70,6 @@
 			<p class="footer">The pictures that we used to create this website were all found through google searches. The pictures (except for our own foto's) can be found in the google images tab at any time.</p>
 			<p class="footer">A link to the course can be found <a href="https://uu.blackboard.com/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_25_1">here</a>. Blackboard is a secure environment and you will thus need to log in.</p>
 		</footer>
+		<script type="text/javascript" src="select.js"></script>
 	</body>
 </html>
