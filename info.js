@@ -33,7 +33,6 @@ function CreateTable(list) {
 	var pos = document.getElementsByTagName("section")[0];
 	var tbl = document.createElement("table");
 	tbl.setAttribute("class", "tablemobile");
-	tbl.setAttribute("style", "display: table;")
 	tbl.setAttribute("border", "1");
 	var tbdy = document.createElement("tbody");
 
@@ -46,9 +45,19 @@ function CreateTable(list) {
 				tr.appendChild(th);
 			}
 			else {
-				var td = document.createElement("td");
-				td.appendChild(document.createTextNode(list[i][j]));
-				tr.appendChild(td);
+				if(j == 2 && i != 0) {
+					var td = document.createElement("td");
+					var link = document.createElement("a");
+					link.setAttribute("href", "staff.html");
+					link.appendChild(document.createTextNode(list[i][j]));
+					td.appendChild(link);
+					tr.appendChild(td);
+				}
+				else {
+					var td = document.createElement("td");
+					td.appendChild(document.createTextNode(list[i][j]));
+					tr.appendChild(td);
+				}
 			}
 		}
 		tbdy.appendChild(tr);
