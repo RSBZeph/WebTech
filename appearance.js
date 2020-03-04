@@ -17,11 +17,13 @@ function showMenu() {
 	newDiv.setAttribute("id", "dropMenuDiv");
 
 	var list = ["body", "header", "aside", "section", "footer"];
-	var elem = createSelect("attribute", list);
+	var list2 = ["All", "Header", "Menu", "Content", "Footer"];
+	var elem = createSelect("attribute", list, list2);
 	newDiv.appendChild(elem);
 
 	var list = ["background-color", "color", "font-size"];
-	var elem = createSelect("property", list);
+	var list2 = ["Background Color", "Text Color", "Text Size"];
+	var elem = createSelect("property", list, list2);
 	newDiv.appendChild(elem);
 
 	var list1 = ["type", "id", "placeholder"];
@@ -33,19 +35,19 @@ function showMenu() {
 	document.getElementById("value").addEventListener("input", changeAppearance, false);	
 }
 
-function createSelect(name, list) {
+function createSelect(name, list, list2) {
 	var elem = document.createElement("select");
 	elem.setAttribute("id", name);
 	for(var i = 0; i < list.length; i++) {
-		var opt = createOption(list[i]);
+		var opt = createOption(list[i], list2[i]);
 		elem.appendChild(opt);
 	}
 	return elem;
 }
 
-function createOption(name) {
+function createOption(value, name) {
 	var option = document.createElement("option");
-	option.setAttribute("value", name);
+	option.setAttribute("value", value);
 	option.appendChild(document.createTextNode(name));
 	return option;
 }
@@ -58,8 +60,6 @@ function createInput(list1, list2) {
 	return input;
 }
 
-// Werkend maken met FireFox
-// Heeft net iets andere rules
 function changeAppearance(event) {
 	var attribute = document.getElementById("attribute").value;
 	var property = document.getElementById("property").value;
