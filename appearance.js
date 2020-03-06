@@ -5,12 +5,10 @@ document.getElementById("dropMenu").addEventListener("click", findDropDown, fals
 // If not... make one... else... remove it
 // This makes the div toggle when clicked on
 function findDropDown() {
-	// Position of the new div
-	let pos = document.getElementsByTagName("div")[1];
-	let tar = document.getElementById("dropMenuDiv");
-	if(pos.contains(tar)) {
+	var tar = document.getElementById("dropMenuDiv");
+	if(tar != undefined) {
 		tar.parentNode.removeChild(tar);
-	} 
+	}
 	else {
 		showMenu();
 	}
@@ -19,7 +17,7 @@ function findDropDown() {
 // Function that creates the new div containing the select inputs
 function showMenu() {
 	// Determine position for the new div
-	let pos = document.getElementsByTagName("div")[1];
+	var pos = document.getElementsByTagName("div")[0];
 	// Create new div
 	let newDiv = document.createElement("div");
 	newDiv.setAttribute("id", "dropMenuDiv");
@@ -44,12 +42,12 @@ function showMenu() {
 	let list2 = ["text", "value", "value"];
 	let elem = createInput(list1, list2);
 	newDiv.appendChild(elem);
-	// Give the input an event listener to change the appearance based on the selected input
-	// Appearance changes when a new input is given
-	document.getElementById("value").addEventListener("input", changeAppearance, false);	
 
 	// Add the new div to the target position
 	pos.appendChild(newDiv);
+	// Give the input an event listener to change the appearance based on the selected input
+	// Appearance changes when a new input is given
+	document.getElementById("value").addEventListener("input", changeAppearance, false);
 }
 
 // Function to create a new select tag
