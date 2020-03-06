@@ -1,7 +1,7 @@
 document.getElementById("dropMenu").addEventListener("click", findDropDown, false);
 
 function findDropDown() {
-	var pos = document.getElementsByTagName("div")[2];
+	var pos = document.getElementsByTagName("div")[1];
 	var tar = document.getElementById("dropMenuDiv");
 	if(pos.contains(tar)) {
 		tar.parentNode.removeChild(tar);
@@ -12,7 +12,7 @@ function findDropDown() {
 }
 
 function showMenu() {
-	var pos = document.getElementsByTagName("div")[2];
+	var pos = document.getElementsByTagName("div")[1];
 	var newDiv = document.createElement("div");
 	newDiv.setAttribute("id", "dropMenuDiv");
 
