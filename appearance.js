@@ -6,8 +6,8 @@ document.getElementById("dropMenu").addEventListener("click", findDropDown, fals
 // This makes the div toggle when clicked on
 function findDropDown() {
 	// Position of the new div
-	var pos = document.getElementsByTagName("div")[1];
-	var tar = document.getElementById("dropMenuDiv");
+	let pos = document.getElementsByTagName("div")[1];
+	let tar = document.getElementById("dropMenuDiv");
 	if(pos.contains(tar)) {
 		tar.parentNode.removeChild(tar);
 	} 
@@ -19,30 +19,30 @@ function findDropDown() {
 // Function that creates the new div containing the select inputs
 function showMenu() {
 	// Determine position for the new div
-	var pos = document.getElementsByTagName("div")[1];
+	let pos = document.getElementsByTagName("div")[1];
 	// Create new div
-	var newDiv = document.createElement("div");
+	let newDiv = document.createElement("div");
 	newDiv.setAttribute("id", "dropMenuDiv");
 
 	// Options for the first select...
-	var list = ["body", "header", "aside", "section", "footer"];
+	let list = ["body", "header", "aside", "section", "footer"];
 	// ... and their names
-	var list2 = ["All", "Header", "Menu", "Content", "Footer"];
+	let list2 = ["All", "Header", "Menu", "Content", "Footer"];
 	// Create new select input
-	var elem = createSelect("attribute", list, list2);
+	let elem = createSelect("attribute", list, list2);
 	// Add it to the new div
 	newDiv.appendChild(elem);
 
 	// Same as above but now with properties of those options
-	var list = ["background-color", "color", "font-size"];
-	var list2 = ["Background Color", "Text Color", "Text Size"];
-	var elem = createSelect("property", list, list2);
+	let list = ["background-color", "color", "font-size"];
+	let list2 = ["Background Color", "Text Color", "Text Size"];
+	let elem = createSelect("property", list, list2);
 	newDiv.appendChild(elem);
 
 	// Create an input for a user to write values in
-	var list1 = ["type", "id", "placeholder"];
-	var list2 = ["text", "value", "value"];
-	var elem = createInput(list1, list2);
+	let list1 = ["type", "id", "placeholder"];
+	let list2 = ["text", "value", "value"];
+	let elem = createInput(list1, list2);
 	newDiv.appendChild(elem);
 	// Give the input an event listener to change the appearance based on the selected input
 	// Appearance changes when a new input is given
@@ -54,11 +54,11 @@ function showMenu() {
 
 // Function to create a new select tag
 function createSelect(name, list, list2) {
-	var elem = document.createElement("select");
+	let elem = document.createElement("select");
 	elem.setAttribute("id", name);
 	// Give the select tag a few options for the user to choose from
-	for(var i = 0; i < list.length; i++) {
-		var opt = createOption(list[i], list2[i]);
+	for(let i = 0; i < list.length; i++) {
+		let opt = createOption(list[i], list2[i]);
 		elem.appendChild(opt);
 	}
 	return elem;
@@ -66,7 +66,7 @@ function createSelect(name, list, list2) {
 
 // Function that creates a new option tag
 function createOption(value, name) {
-	var option = document.createElement("option");
+	let option = document.createElement("option");
 	option.setAttribute("value", value);
 	// Give the option a name to be shown on the screen
 	option.appendChild(document.createTextNode(name));
@@ -75,9 +75,9 @@ function createOption(value, name) {
 
 // Function that creates a new input tag
 function createInput(list1, list2) {
-	var input = document.createElement("input");
+	let input = document.createElement("input");
 	// Give the input tag a few attributes
-	for(var i = 0; i < list1.length; i++) {
+	for(let i = 0; i < list1.length; i++) {
 		input.setAttribute(list1[i], list2[i]);
 	}
 	return input;
@@ -87,11 +87,11 @@ function createInput(list1, list2) {
 function changeAppearance(event) {
 	// Get the three inputs given by the user in the newly created div
 	// Part of the page
-	var attribute = document.getElementById("attribute").value;
+	let attribute = document.getElementById("attribute").value;
 	// property of that part
-	var property = document.getElementById("property").value;
+	let property = document.getElementById("property").value;
 	// Its new value
-	var value = document.getElementById("value").value;
+	let value = document.getElementById("value").value;
 
 	// Code that changes the style of the selected attribute with the property and the new value
 	switch(property) {
