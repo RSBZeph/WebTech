@@ -1,7 +1,7 @@
 window.addEventListener("load", LoadInfo, false);
 
 function LoadInfo() {
-	var c = new Course();
+	var c = new Course("Gameprogrammeren","INFOB1GP", "Information and Computing Sciences", 7.5, 1, "D", new Staff(new Lecturer("Dr.", "Gameprogrammer", "1234"), new Assistent("Fabian", "van Maanen", "3456"), new Assistent("Yoran", "den Heijer", "5678"), new Assistent("Romeo", "Zeph", "7890")));
 	CreateText("h2", "Course Information")
 	CreateText("p", "Titel: " + c.title);
 	CreateText("p", "Code: " + c.code);
@@ -68,23 +68,23 @@ function CreateTable(list) {
 }
 
 class Course {
-	constructor() {
-		this.title = "Gameprogrammeren";
-		this.code = "INFOB1GP";
-		this.department = "Information and Computing Sciences";
-		this.credits = 7.5;
-		this.period = 1;
-		this.timeslot = "D";
-		this.staff = new Staff();
+	constructor(title, code, department, credits, period, timeslot, staff) {
+		this.title = title; 
+		this.code = code;
+		this.department = department;
+		this.credits = credits; 
+		this.period = period;
+		this.timeslot = timeslot;
+		this.staff = staff; 
 	}
 }
 
 class Staff {
-	constructor() {
-		this.lec = new Lecturer("Dr.", "Gameprogrammer", "1234");
-		this.ass1 = new Assistent("Fabian", "van Maanen", "3456");
-		this.ass2 = new Assistent("Yoran", "den Heijer", "5678");
-		this.ass3 = new Assistent("Romeo", "Zeph", "7890");
+	constructor(lecturer, assistent1, assistent2, assistent3) {
+		this.lec = lecturer;
+		this.ass1 = assistent1;
+		this.ass2 = assistent2;
+		this.ass3 = assistent3;
 	}
 }
 
