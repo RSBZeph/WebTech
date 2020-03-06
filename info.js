@@ -1,41 +1,5 @@
-// Event listener that loads the data on page load
-window.addEventListener("load", LoadInfo, false);
-
-// FUnction that takes the data given and writes it on the webpage
-function LoadInfo() {
-	// Course instance that contains all information
-	var c = new Course("Gameprogrammeren","INFOB1GP", "Information and Computing Sciences", 7.5, 1, "D", new Staff(new Lecturer("Dr.", "Gameprogrammer", "1234"), new Assistent("Fabian", "van Maanen", "3456"), new Assistent("Yoran", "den Heijer", "5678"), new Assistent("Romeo", "Zeph", "7890")));
-	CreateText("h2", "Course Information")
-	CreateText("p", "Titel: " + c.title);
-	CreateText("p", "Code: " + c.code);
-	CreateText("p", "Departement: " + c.department);
-	CreateText("p", "Credits: " + c.credits);
-	CreateText("p", "Periode: " + c.period);
-	CreateText("p", "Tijdslot: " + c.timeslot);
-	CreateText("p", "Groepen en Docenten:");
-
-	// List to fill the table
-	var list = [
-		["Vorm", "Groep", "Docent"],
-		["Hoorcollege", "-", c.staff.lec.getFullName()],
-		["Werkcollege", "Groep 1", c.staff.ass1.getFullName()],
-		["Werkcollege", "Groep 2", c.staff.ass2.getFullName()],
-		["Werkcollege", "Groep 3", c.staff.ass3.getFullName()]
-	];
-	CreateTable(list);
-}
-
-// Function that takes a tag and the text for it and creates a text node
-function CreateText(tag, text) {
-	var pos = document.getElementsByTagName("section")[0];
-	var myLink = document.createElement(tag);
-	var myText = document.createTextNode(text);
-	myLink.appendChild(myText);
-	pos.appendChild(myLink);
-}
-
 // Creates a table with the data in the list that is given
-function CreateTable(list) {
+const CreateTable = (list) =>{
 	// Determine the position of the table
 	var pos = document.getElementsByTagName("section")[0];
 	// Create the actual table
@@ -82,6 +46,42 @@ function CreateTable(list) {
 	tbl.appendChild(tbdy);
 	pos.appendChild(tbl);
 }
+
+// Function that takes a tag and the text for it and creates a text node
+const CreateText = (tag, text) =>{
+	var pos = document.getElementsByTagName("section")[0];
+	var myLink = document.createElement(tag);
+	var myText = document.createTextNode(text);
+	myLink.appendChild(myText);
+	pos.appendChild(myLink);
+}
+
+// FUnction that takes the data given and writes it on the webpage
+const LoadInfo = () =>{
+	// Course instance that contains all information
+	var c = new Course("Gameprogrammeren","INFOB1GP", "Information and Computing Sciences", 7.5, 1, "D", new Staff(new Lecturer("Dr.", "Gameprogrammer", "1234"), new Assistent("Fabian", "van Maanen", "3456"), new Assistent("Yoran", "den Heijer", "5678"), new Assistent("Romeo", "Zeph", "7890")));
+	CreateText("h2", "Course Information")
+	CreateText("p", "Titel: " + c.title);
+	CreateText("p", "Code: " + c.code);
+	CreateText("p", "Departement: " + c.department);
+	CreateText("p", "Credits: " + c.credits);
+	CreateText("p", "Periode: " + c.period);
+	CreateText("p", "Tijdslot: " + c.timeslot);
+	CreateText("p", "Groepen en Docenten:");
+
+	// List to fill the table
+	var list = [
+		["Vorm", "Groep", "Docent"],
+		["Hoorcollege", "-", c.staff.lec.getFullName()],
+		["Werkcollege", "Groep 1", c.staff.ass1.getFullName()],
+		["Werkcollege", "Groep 2", c.staff.ass2.getFullName()],
+		["Werkcollege", "Groep 3", c.staff.ass3.getFullName()]
+	];
+	CreateTable(list);
+}
+
+// Event listener that loads the data on page load
+window.addEventListener("load", LoadInfo, false);
 
 // Class that contains all information
 class Course {

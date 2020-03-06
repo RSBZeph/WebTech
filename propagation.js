@@ -1,10 +1,10 @@
-document.getElementById("propChild").addEventListener("click", a, false);
-document.getElementById("propParent").addEventListener("click", b, false);
-
-function a() {
+const a = () =>{
 	alert("This is an alert for the button")
 }
 
-function b() {
+const b = () =>{
 	alert("This is an alert for the parent of the button")
 }
+
+document.getElementById("propChild").addEventListener("click", a, false);
+document.getElementById("propParent").addEventListener("click", b, false);
