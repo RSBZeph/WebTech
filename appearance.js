@@ -61,9 +61,9 @@ const showMenu = () => {
 	newDiv.setAttribute("id", "dropMenuDiv");
 
 	// Options for the first select...
-	let list = ["body", "header", "aside", "section", "footer"];
+	let list = ["body", "header", "section"];
 	// ... and their names
-	let list2 = ["All", "Header", "Menu", "Content", "Footer"];
+	let list2 = ["All", "Header", "Content"];
 	// Create new select input
 	let elem = createSelect("attribute", list, list2);
 	// Add it to the new div
